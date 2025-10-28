@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+
+        .card .card-front {
+            background-color: green;
+            height: 100%;
+            width: 100%;
+            padding: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index:90;
+        }
+
+        .card .card-back {
+             background-color: red;
+            height: 100%;
+            width: 100%;
+            padding: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index:50;
+        }
+
+        .card:hover .card-back {
+            z-index: 99;
+        }
+    </style>
+</head>
+<body>
+    <h1>z-index</h1>
+
+    <section class="card">
+        <div class="card-front">
+            <h3>Front-Side</h3>
+        </div>
+        <div class="card-back">
+            <h3>Back-side</h3>
+        </div>
+    </section>
+</body>
+</html>

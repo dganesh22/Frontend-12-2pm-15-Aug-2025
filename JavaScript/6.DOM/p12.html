@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>document.getElementsByTagName(tag)</h1>
+     <div>
+        <p>sample paragraph text</p>
+        <p>sample paragraph text</p>
+        <p>sample paragraph text</p>
+        <p>sample paragraph text</p>
+        <p>sample paragraph text</p>
+        <p>sample paragraph text</p>
+        <p>sample paragraph text</p>
+            <h3>sample heading</h3>
+        <p>sample paragraph text</p>
+        <p>sample paragraph text</p>
+        <p>sample paragraph text</p>
+    </div>
+    <hr>
+    <button onclick="handler()">Click me</button>
+<script>
+    var para = document.getElementsByTagName("p")
+    console.log(`total para=`, para)
+
+    function handler() {
+         for(let i=0; i< para.length; i++) {
+                para[i].style.color = "red";
+                para[i].style.textDecoration = "underline";
+            }
+    }
+</script>
+
+</body>
+</html>

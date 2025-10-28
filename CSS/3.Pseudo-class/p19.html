@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            outline: none;
+        }
+        input[type="email"]:user-valid {
+            border: 2px solid green;
+        }
+        input[type="email"]:user-invalid {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1>:user-valid</h1>
+    <form action="">
+        <label for="">Enter email id </label>
+        <input type="email" name="email" id="email" required>
+    </form>
+</body>
+</html>

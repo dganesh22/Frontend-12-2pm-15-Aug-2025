@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>forms</h1>
+    <!-- form, legend, fieldset, label, input, textarea, select -->
+     <!-- input types => text, number, email, password, url, search, date, datetime, datetime-local, time,week,month, checkbox,radio,submit,reset,range, image,hidden,file,color,tel, button -->
+
+     <!-- 
+        form attributes
+            action - used to specify action path or server url
+            
+            autocomplete - handle browser history
+                on = uses browser form history, 
+                off = clears
+            
+            method - handle method types
+                get = to send the data to server (data is visible in url interms of query)
+                post = to send the data to server (data is hidden)
+            
+            enctype -  specify the encryption type
+                application/x-www-form-url-encoded = default encryption format of form inputs
+                multipart/formdata = is used only if we have input type file
+                text/plain = plain string / text
+     -->
+
+     <form action="" autocomplete="" method="" enctype="">
+         <fieldset>
+            <legend>Login Form</legend>
+
+            <div>
+                <label for="username">Your Username</label>
+                <input type="text" name="username" id="username" placeholder="only characters" required value="admin" readonly>
+            </div>
+
+            <div>
+                <label for="pass">Your password</label>
+                <input type="password" name="pass" id="pass" placeholder="min 6 characters">
+            </div>
+
+            <div>
+                <input type="submit" value="Login" disabled>
+                <input type="reset" value="Clear">
+            </div>
+         </fieldset>
+     </form>
+
+     <!-- 
+        form tags
+
+                fieldset -> create the border line around the form
+                legend    -> add the  title by breaking the fieldset
+                label  -> add the label
+                select -> dropdown single,multiple
+                textarea -> multi line input  
+
+        input attributes 
+            type = decide the type of input
+            name = input field name
+            id = input field id
+            placeholder = hint
+            required = mandatory
+            readonly = disable write operation
+            value = default value
+            disable = disable the input
+     -->
+</body>
+</html>

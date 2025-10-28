@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { box-sizing: border-box;}
+
+        body { 
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            background-color: gray;
+            padding: 10px;
+        }
+
+        .container div {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+
+        .b1 {
+            background-color: #ffa50098;
+        }
+        .b2 {
+            background-color: #48a50098;
+            position:  relative;
+            top: 10px;
+            left: 300px;
+        }
+        .b3 {
+            background-color: #aba50098;
+        }
+    </style>
+</head>
+<body>
+     <section class="container">
+        <div class="b1">
+            block1
+        </div>
+        <div class="b2">
+            block2
+        </div>
+        <div class="b3">
+            block3
+        </div>
+    </section>
+</body>
+</html>

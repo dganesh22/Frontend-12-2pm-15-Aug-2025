@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Open()</h1>
+
+    <button onclick="handler1()">Open Tab</button>
+    <button onclick="handler2()">Open Window</button>
+
+    <script>
+        function handler1() {
+            // open(url path)
+            open("https://be-practical.com")
+        }
+
+        function handler2() {
+            // open(url path, title, optionals)
+            open("https://be-practical.com", "window title", "width=400px;height=400px;")
+        }
+    </script>
+</body>
+</html>

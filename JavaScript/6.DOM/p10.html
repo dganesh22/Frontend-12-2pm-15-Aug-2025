@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>document.getElementById().value</h1>
+
+    <form method="post" onsubmit="handler(event)">
+        <div>
+            <label for="user">Your username</label>
+            <input type="text" name="user" id="user" required>
+        </div>
+
+        <div>
+            <label for="pass">Your Password</label>
+            <input type="password" name="pass" id="pass" required>
+        </div>
+
+        <div>
+            <input type="submit" value="Login">
+        </div>
+    </form>
+
+    <script>
+        var user = document.getElementById("user")
+        var pass = document.getElementById("pass")
+
+        function handler(event) {
+            event.preventDefault(); // avoid page refresh
+            let data = {
+                username: user.value,
+                password: pass.value
+            }
+            console.log(`login = `, data)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #pro {
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>text in canvas</h1>
+    <canvas id="pro" height="400" width="600"></canvas>
+    <script>
+        let canv = document.getElementById("pro");
+        let cx = canv.getContext("2d");
+        cx.font = "42px serif";
+        cx.fillStyle = "green";
+        cx.strokeText("Welcome to HTML", 30, 40);
+        cx.fillText("Welcome to HTML", 30, 90);
+    </script>
+</body>
+</html>

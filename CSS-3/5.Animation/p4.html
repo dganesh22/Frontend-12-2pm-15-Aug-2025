@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .ball {
+            background:linear-gradient(to top right,slateblue,orange);
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: anim1 4s linear 0s 4;
+            animation-play-state: running; /* running, paused */
+        }
+
+
+        @keyframes anim1 {
+            0% {
+                transform: translate(0px,0px);
+            }
+            25% {
+                transform: translate(200px,500px);
+            }
+            50% {
+                transform: translate(500px,0px);
+            }
+            75% {
+                transform: translate(750px,500px);
+            }
+            100% {
+                transform: translate(1200px,0px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Animation-play-state</h1>
+
+    <button id="playBtn">Play</button>
+    <button id="pauseBtn">Pause</button>
+    
+    <div class="ball"></div>
+
+    <script>
+        let playBtn = document.getElementById("playBtn")
+        let pauseBtn = document.getElementById("pauseBtn");
+        let ball = document.querySelector(".ball")
+
+        playBtn.onclick = function() {
+            ball.style.animationPlayState = "running";
+        }
+        pauseBtn.onclick = function() {
+            ball.style.animationPlayState = "paused";
+        }
+    </script>
+</body>
+</html>

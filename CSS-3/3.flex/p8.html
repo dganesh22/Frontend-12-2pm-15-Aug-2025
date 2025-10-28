@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { box-sizing: border-box;}
+
+        body {
+            width: 100%;
+            overflow-x: hidden;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+
+        .top-header,
+        footer {
+            
+            background-color: teal;
+            height: 100%;
+            padding: 20px;
+            color:#fff;
+            text-align: center;
+        }
+
+        footer { background-color: #222;}
+
+        .data {
+            background-color: #fff;
+            height: 100vh;
+            display: flex;
+            flex: 1 1 auto;
+        }
+
+        .left,
+        .right {
+            background-color: orange;
+        }
+
+        .content {
+             background-color: gray;
+             order: 2;
+             width: 100%;
+             padding: 10px;
+        }
+
+        .left {
+            order: 1;
+        }
+
+        .right {
+            order: 3;
+        }
+
+        .side-bar {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+            <header class="top-header">
+                <h3>Heading section</h3>
+            </header>
+
+            <div class="data">
+                <aside class="side-bar left">
+                    Left side bar
+                </aside>
+
+                <aside class="side-bar right">
+                    Right sidebar
+                </aside>
+
+                <main class="content">
+                    <h4>Content Block</h4>
+                </main>
+            </div>
+
+            <footer>
+                <p>All rights reserved 2025</p>
+            </footer>
+     </section>
+</body>
+</html>

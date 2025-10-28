@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .ball {
+            background:linear-gradient(to top right,slateblue,orange);
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: anim1 4s linear 0s 4;
+        }
+
+
+        @keyframes anim1 {
+            from {
+                transform: translateX(0px);
+            }
+            to {
+                transform: translateX(1200px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Animation</h1>
+    
+    <div class="ball"></div>
+</body>
+</html>

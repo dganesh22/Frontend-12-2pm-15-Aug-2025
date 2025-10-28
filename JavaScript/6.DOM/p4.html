@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h1>Task</h1>
+      <!-- 
+        Marks of individual students
+            John = 87
+            Tom = 56
+            Sam = 96
+        create div block with id=result , 
+        print the total marks in h1 tag and 
+        average h3 tag in the block
+      
+      -->
+        <button id="btn">Click me</button>
+        <div id="result"></div>
+
+        <script>
+            var btn = document.getElementById("btn")
+            var result = document.getElementById("result")
+
+            var john = 87;
+            var tom = 56;
+            var sam = 96;
+
+            btn.onclick = function() {
+                let total = john + tom + sam; 
+                result.innerHTML = `<div>
+                                        <h1>Total Marks =${total} </h1>
+                                        <h3>Average = ${total/3}% </h3>
+                                    </div>`;
+            }
+        </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .container {
+            display: grid;
+            column-gap: 5px;
+            row-gap: 10px;
+            grid-template-columns: repeat(4,1fr);
+        }
+
+        .container div {
+            padding: 20px;
+            background-color: teal;
+        }
+
+        .box1 {
+            grid-column: span 3;
+            grid-row: span 2;
+        }
+    </style>
+</head>
+<body>
+     <section class="container">
+         <div class="box1">one</div>
+         <div class="box2">two</div>
+         <div class="box3">three</div>
+         <div class="box4">four</div>
+         <div class="box5">five</div>
+         <div class="box6">six</div>
+         <div class="box7">seven</div>
+         <div class="box8">eight</div>
+    </section>
+</body>
+</html>

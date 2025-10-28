@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container-2 h1:last-of-type {
+            color:green;
+        }
+
+        .container-2 h1:first-of-type {
+            color:orange;
+        }
+
+
+        .container-2 h1:nth-of-type(2) {
+            color: slateblue;
+        }
+
+        .container-1 h1:first-child {
+            color: green;
+        }
+        .container-1 h1:last-child {
+            color: orangered;
+        }
+
+    </style>
+</head>
+<body>
+    <h2> :first-of-type :last-of-type and :nth-of-type(position) </h2>
+     <div class="container-1">
+        <h1>Header tag 1</h1>
+        <h1>Header tag 2</h1>
+        <h1>Header tag 3</h1>
+        <h1>Header tag 4</h1>
+    </div>
+    <hr>
+
+    <div class="container-2">
+        <p>sample para</p>
+        <h1>Header tag 1</h1>
+            <p>para tag 1</p>
+        <h1>Header tag 2</h1>
+            <p>para tag 2</p>
+        <h1>Header tag 3</h1>
+            <p>para tag 3</p>
+        <h1>Header tag 4</h1>
+            <p>para tag 4</p>
+    </div>
+</body>
+</html>

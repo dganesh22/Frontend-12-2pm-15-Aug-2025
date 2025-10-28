@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            padding: 10px;
+            background-color: orange;
+            margin-top: 1rem;
+        }
+
+        .blk {
+            background-color: slateblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>document.querySelector(html/.class/#id)</h1>
+    
+    <button onclick="handler1()">class</button>
+    <hr>
+    <div></div>
+    <div class="blk"></div>
+    <div></div>
+    <div class="blk"></div>
+
+    <script>
+        var dEl = document.querySelector(".blk");
+
+        function handler1() {
+            dEl.innerHTML = `<section>
+                                <h1>Welcome to html</h1>
+                                <button>Login</button>
+                                <h3>This is sub title</h3>
+                            </section>`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            transition: all 3s;
+        }
+        .b1 { background-color: teal;}
+        .b2 { background-color: orangered;}
+        .b3 { background-color: green;}
+
+        .b1:hover {
+            transform: scale(2.5,1.8);
+        }
+        .b2:hover {
+            transform: scaleX(2.5);
+        }
+        .b3:hover {
+            transform: scaleY(2.8);
+        }
+    </style>
+</head>
+<body>
+    <h1>scale</h1>
+     <div class="b1">block-1</div>
+    <div class="b2">block-2</div>
+    <div class="b3">block-3</div>
+</body>
+</html>

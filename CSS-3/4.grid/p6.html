@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: auto;
+            padding: 0;
+            width: 90%;
+            height: 100vh;
+            overflow-x: hidden;
+            display: grid;
+            grid-template-columns: 100px 1fr 100px;
+            grid-template-rows: 50px 1fr 50px;
+            grid-template-areas: "tph tph tph" "lft cnt rgt" "ft ft ft";
+            text-align: center;
+        }
+
+        .heading {
+            grid-area: tph;
+            background-color: teal;
+        }
+        .left {
+            grid-area: lft;
+            background-color: brown;
+        }
+        .right {
+            grid-area: rgt;
+            background-color: orange;
+        }
+        .container {
+            grid-area: cnt;
+            background-color: rosybrown;
+        }
+        .foot {
+            grid-area: ft;
+            background-color: #222;
+            color:#fff;
+        }
+    </style>
+</head>
+<body>
+    <header class="heading">
+        <h3>heading section</h3>
+    </header>
+
+    <aside class="left">
+        <p>left side</p>
+    </aside>
+
+    <div class="container">
+        <h2>body section</h2>
+    </div>
+
+    <aside class="right">
+        <p>right side</p>
+    </aside>
+
+    <footer class="foot">
+        <p>All rights reserved &copy; <strong id="yr"></strong> </p>
+    </footer>
+</body>
+</html>

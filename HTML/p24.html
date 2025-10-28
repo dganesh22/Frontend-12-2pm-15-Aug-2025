@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>checkbox</h1>
+
+    <form action="">
+        <div>
+            <h1 id="output"></h1>
+            <label>
+                <input type="checkbox" name="agree" id="agree">
+            </label>
+             <label for="agree">I agree the terms and conditions.</label>
+        </div>
+    </form>
+
+    <script>
+            let output = document.getElementById("output")
+            let agree = document.getElementById("agree")
+
+            agree.addEventListener("change", function(event){
+                output.innerText = event.target.checked
+            })
+    </script>
+</body>
+</html>

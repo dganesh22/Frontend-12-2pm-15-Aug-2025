@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #pic {
+            width: 500px;
+            height: 500px;
+            border: 2px solid #222;
+        }
+    </style>
+</head>
+<body>
+    <h1>canvas tag</h1>
+    <canvas id="pic"></canvas>
+
+    <script>
+        var canv = document.getElementById('pic');
+        var tx = canv.getContext("2d");
+        tx.fillStyle = "orange";
+        tx.fillRect(120,50,100,60)
+        tx.strokeRect(10,10,30,20)
+    </script>
+</body>
+</html>

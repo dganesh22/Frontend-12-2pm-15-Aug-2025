@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        progress{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>progress tag</h1>
+    <progress min="0" max="100" value="10" id="prg"></progress>
+    <h3 id="out"></h3>
+
+    <script>
+        let prg = document.getElementById("prg")
+        let out = document.getElementById("out")
+        let x = 0
+
+        function handleProgress() {
+            if(x < 100) {
+                x+= 1;
+                prg.value = x;
+                out.innerText = `Downloading is in progress..${x}%`;
+            } else {
+                out.innerText = "Download completed";
+                clearInterval()
+            }
+        }
+
+        setInterval(handleProgress,1000)
+    </script>
+</body>
+</html>

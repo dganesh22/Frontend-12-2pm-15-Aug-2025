@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p[class*="btn"] {
+            padding: 8px 10px;
+            text-decoration: none;
+            background-color: teal;
+            color:#fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Attribute selectors [attr*=value] </h1>
+   <!-- value present at any position, can combine with any values -->
+    <div>
+       <p class="btn del">Item-1</p>
+       <p class="add-btn">Item-2</p>
+       <p class="btn clk">Item-3</p>
+       <p class="cap btn">Item-4</p>
+       <p class="btn-link">Item-5</p>
+       <p class="clr btn">Item-6</p>
+    </div>
+</body>
+</html>

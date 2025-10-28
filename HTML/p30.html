@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        dialog {
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dialog tag</h1>
+    <button id="showBtn">Show Dialog</button>
+
+    <dialog id="msg">
+        <div>
+            <h1>Dialog heading</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos nisi maiores tenetur cupiditate illo eius omnis possimus maxime labore deserunt, excepturi aliquid assumenda exercitationem. Dolorum tempore inventore tempora rem saepe?</p>
+        </div>
+
+        <div>
+            <button id="cnf">Confirm</button>
+            <button id="clsBtn">Close</button>
+        </div>
+    </dialog>
+
+    <script>
+        let showBtn = document.getElementById("showBtn")
+        let msg = document.getElementById("msg")
+        let clsBtn = document.getElementById("clsBtn")
+
+        showBtn.addEventListener("click", function(){
+            msg.show()
+        })
+
+        clsBtn.addEventListener("click", function () {
+            msg.close()
+        })
+    </script>
+</body>
+</html>

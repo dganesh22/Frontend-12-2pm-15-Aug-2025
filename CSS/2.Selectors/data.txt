@@ -1,0 +1,30 @@
+Css Selectors 
+        are the patterns users to select the target DOM (elements) on the web page to apply styles to them.
+
+Types
+    1. Basic / primary / simple Selectors
+        a. html tag
+        b.  class (.name)
+        c.  id (#name)
+    2. Universal selector (*)
+    3. Group selector (,)
+    4. Compound Selector (tag.class_a/ .class1.class2)
+        eg: 
+            button.act  / div.hero
+            .container.blk
+    5. Combinators (parent - child)
+         Decendant (space) - all child and grand childs
+         Child (>)  - only first direct child
+         General Sibling (~) all siblings
+         Adjacent sibling (+) 
+    6. Attribute Selector [attr]
+        [attr]
+        [attr=value]
+        [attr~=value]
+        [attr^=value]
+        [attr$=value]
+        [attr*=value]
+
+Pseudo Properties (built in)
+  selector:Pseudo_class
+  selector::Pseudo_element

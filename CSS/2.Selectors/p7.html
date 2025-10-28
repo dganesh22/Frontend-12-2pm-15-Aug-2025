@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container-1,
+        .container-2 {
+            height: 50vh;
+            width: 60%;
+            background-color: #ccc;
+            margin: 1rem;
+        }
+
+        .container-1 .card-1 {
+            height: 50px;
+            width: 50px;
+            border: 1px solid red;
+            padding: 20px;
+        }
+
+        .container-2 > .card-2 {
+            height: 50px;
+            width: 50px;
+            border: 1px solid red;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Combinators</h1>
+    <h3>Decendant (space) </h3>
+    <p>Selects all child and grand childs of the parent element</p>
+
+    <section class="container-1">
+        <div class="card-1">
+            <h4>First Child</h4>
+            <div class="card-1">
+                <h4>Second Child</h4>
+                <div class="card-1">
+                    <h4>Third child</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <h3>Child (>) </h3>
+    <p>Selects only direct childs of the parent element </p>
+
+      <section class="container-2">
+        <div class="card-2">
+            <h4>First Child</h4>
+            <div class="card-2">
+                <h4>Second Child</h4>
+                <div class="card-2">
+                    <h4>Third child</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

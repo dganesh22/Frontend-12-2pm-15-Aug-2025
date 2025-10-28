@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #output {
+            padding: 20px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>document.cookie</h1>
+    <!-- cookie is a browser variable -->
+
+    <div>
+        <label for="user">Enter name</label>
+        <input type="text" name="user" id="user" required>
+    </div>
+
+    <button onclick="setHandler()">Set Cookie</button>
+    <button onclick="clearHandler()">Clear cookie</button>
+
+    <hr>
+
+    <h1 id="output"></h1>
+
+    <script>
+        let user = document.getElementById("user")
+        let output = document.getElementById("output")
+
+        function setHandler() {
+            // document.cookie = `name=value;optionals;`
+            document.cookie = `username=${user.value};expires=28 Oct 2025 13:50:00 GMT+5.30;SameSite=None;Secure`;
+            alert("cookie set successfully")
+            window.location.reload()
+        }
+
+        function readHandler() {
+            if(document.cookie) {
+                console.log(document.cookie) // username=mark
+                let res = document.cookie.split("=") // ["username", "mark"]
+                console.log(res)
+                output.innerText = `cookie name ${res[0]} and value ${res[1]}`;
+            } else {
+                output.innerText = `no cookie is set`;
+            }
+        }
+
+        readHandler()
+
+        function clearHandler() {
+            if(confirm(`Do you wish to clear cookie?`)) {
+                let today = new Date(); // retrive the current date and time
+                console.log(today)
+
+                today.setTime(today.getTime() - 1); // expired time
+
+                document.cookie = `username=;expires=${today.toGMTString()}`;
+                alert("cookie cleared successfully")
+                window.location.reload()
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Registration form</h1>
+    <p>Fill out the form carefully for registration</p>
+
+
+    <form action="">
+        <div>
+            <label for="student">Student Name</label>
+            <div>
+                <input type="text" name="first" id="first">
+                <label for="first">First Name</label>
+            </div>
+            <div>
+                <input type="text" name="middle" id="middle">
+                <label for="middle">Middle name</label>
+            </div>
+            <div>
+                <input type="text" name="last" id="last">
+                <label for="last">LastName</label>
+            </div>
+        </div>
+
+        <div>
+            <label for="dob">Birth Date</label>
+            <input type="date" name="dob" id="dob">
+        </div>
+
+        <div>
+            <label for="gender">Gender</label>
+            <select name="gender" id="gender">
+                <option value="null">Choose Gender</option>
+                <option value="male">Male</option>
+                <option value="male">Female</option>
+                <option value="transgender">transgender</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="address">Address</label>
+            <br>
+
+            <div>
+                <input type="text" name="address1" id="address1">
+                <label for="address1">Street Address</label>
+            </div>
+            <div>
+                <input type="text" name="address2" id="address2">
+                <label for="address1">Street Address - 2</label>
+            </div>
+            <div>
+                <input type="text" name="city" id="city">
+                <label for="address1">City</label>
+            </div>
+            <div>
+                <input type="text" name="state" id="state">
+                <label for="state">State</label>
+            </div>
+
+            <div>
+                <input type="number" name="zip" id="zip">
+                <label for="zip">ZipCode</label>
+            </div>
+        </div>
+
+        <div>
+            <label for="email">Student Email</label>
+            <input type="email" name="email" id="email">
+        </div>
+
+        <div>
+            <label for="mobile">Mobile Number</label>
+            <input type="number" name="mobile" id="mobile">
+        </div>
+
+        <div>
+            <label for="phone">Phone Number</label>
+            <input type="number" name="phone" id="phone">
+        </div>
+
+        <div>
+            <label for="work">Work Number</label>
+            <input type="number" name="work" id="work">
+        </div>
+
+        <div>
+            <label for="company">Company</label>
+            <input type="text" name="company" id="company">
+        </div>
+
+        <div>
+            <label for="courses">Courses</label>
+            <select name="courses" id="courses">
+                <option value="null">Choose Courses</option>
+                <option value="mern">MERN FullStack</option>
+                <option value="python">Python Fullstack</option>
+                <option value="java">Java Fullstack</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="comments">Additional Comments</label><br>
+            <textarea name="comments" id="comments" cols="40" rows="8"></textarea>
+        </div>
+
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</body>
+</html>

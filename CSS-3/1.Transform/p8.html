@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+         img {
+            transition: all 3s;
+        }
+
+        img:hover {
+            transform:rotate3d(1,-4,1,45deg);
+            box-shadow: 3px 5px 16px rgba(0, 0, 0, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <h3>rotate3d(x,y,z,angle)</h3>
+    <img src="https://picsum.photos/id/566/400/400" alt="no image">
+</body>
+</html>

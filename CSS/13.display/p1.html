@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: teal;
+            padding: 20px;
+        }
+
+        .container div {
+            background: #222;
+            color:#fff;
+            padding: 10px;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div>first</div>
+        <div>second</div>
+        <div>third</div>
+    </section>
+
+    <hr>
+
+    <main>
+        <form>
+            <div>
+                <label for="disp">Display Properties</label>
+                <select name="disp" id="disp">
+                    <option>block</option>
+                    <option>inline-block</option>
+                    <option>flex</option>
+                    <option>inline-flex</option>
+                    <option>grid</option>
+                    <option>inline-grid</option>
+                    <option>table</option>
+                    <option>list-item</option>
+                    <option>none</option>
+                </select>
+            </div>
+        </form>
+    </main>
+
+    <script>
+        let blocks = document.querySelector(".container");
+        let disp = document.getElementById("disp");
+
+        disp.addEventListener("change", function(e){
+            console.log(`value = `, e.target.value);
+            blocks.style.display = e.target.value;
+        });
+    </script>
+</body>
+</html>

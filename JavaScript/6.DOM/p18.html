@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>document.createTextNode()</h1>
+
+     <button onclick="addTextNode('hello')">Hello</button>
+     <button onclick="addTextNode('world')">World</button>
+     <button onclick="addTextNode('welcome to javascript')">Welcome to JavaScript</button>
+
+     <hr>
+     <p id="out"></p>
+
+     <script>
+        function addTextNode(text) {
+            let nwTxt = document.createTextNode(text);
+            let out = document.getElementById("out")
+            out.appendChild(nwTxt)
+        }
+     </script>
+</body>
+</html>

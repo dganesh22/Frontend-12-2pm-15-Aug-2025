@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          video {
+            width: 100%;
+        }
+        video::cue {
+            font-size: 1.2rem;
+            color:yellow;
+        }
+
+        video::cue(u) {
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <h1>::cue</h1>
+
+    <div>
+        <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" width="800" height="500" controls>
+            <track src="./p4.vtt" default kind="captions" srclang="en">
+        </video>
+    </div>
+</body>
+</html>
