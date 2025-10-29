@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> setAttribute and removeAttribute, createElement </h1>
+
+    <div id="blk">
+        
+    </div>
+
+    <button onclick="setHandler()">Set</button>
+    <button onclick="removeHandler()">Remove</button>
+
+    <script>
+        let blk = document.getElementById("blk")
+        let image = document.createElement("img")
+        let title = document.createElement("h1")
+        
+        function setHandler() {
+
+            image.setAttribute("src", "https://picsum.photos/400/400")
+            image.setAttribute("alt", "no image found")
+            image.setAttribute("width", "100px")
+            image.setAttribute("height", "100px")
+
+            title.innerText= "Welcome image";
+
+            blk.appendChild(image)
+            blk.appendChild(title)
+        }
+
+        function removeHandler() {
+            image.removeAttribute("width")
+            image.removeAttribute("height")
+        }
+    </script>
+</body>
+</html>
