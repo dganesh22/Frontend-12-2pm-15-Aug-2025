@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Number constructor const values </h1>
+
+    <script>
+         console.log(`date = `, Number(new Date())) // return number in milliseconds passed since 1970
+            
+            console.log(`max_value =`, Number.MAX_VALUE) // largest possible max value in js
+            console.log(`min_value =`,  Number.MIN_VALUE) // smallest possible min value in js
+
+            console.log(`-infinity =`, Number.NEGATIVE_INFINITY) // -Infinity
+            console.log(`+infinity =`, Number.POSITIVE_INFINITY) // Infinity
+
+        console.log(`\n`)
+
+        var x = 12345.4534132;
+        console.log(`x = `, x)
+        console.log(`x = `, x.toFixed(3))
+        console.log(`x = `, x.toPrecision(3))
+
+        console.log(`\n`)
+        console.log(`parseInt = `, parseInt(x))
+        console.log(`parseFloat = `, parseFloat(x))
+    </script>
+</body>
+</html>
