@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>onchange</h1>
+
+     <h1 id="output"></h1>
+
+     <form action="">
+        <div>
+            <label for="">Choose Programming Language</label>
+            <select name="lang" id="lang" onchange="handler()">
+                <option value="null">Choose Language</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="js">JavaScript</option>
+                <option value="java">Java</option>
+            </select>
+        </div>
+     </form>
+
+     <script>
+        function handler() {
+            let lang = document.getElementById("lang")
+            let out = document.getElementById("output")
+                if(lang === "null") {
+                    out.innerText = `no value selected`;
+                } else {
+                    out.innerText = `selected language is ${lang.value}`;
+                }
+        }
+     </script>
+</body>
+</html>

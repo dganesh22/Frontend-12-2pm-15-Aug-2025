@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: #ccc;
+        }
+
+        .container {
+            width: 80%;
+            text-align: justify;
+            margin: auto;
+        }
+    </style>
+</head>
+<body oncontextmenu="handler(event)">
+    <h1>oncontextmenu (right click menu) </h1>
+
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nesciunt voluptate esse repellat doloribus maxime, voluptatibus eveniet dolor architecto molestias numquam, ea molestiae repudiandae illo fugiat deserunt expedita. Voluptate, corporis!
+        Autem accusamus nesciunt provident similique modi suscipit, maiores expedita corrupti eligendi corporis alias minus! Consequatur, consectetur. Minima commodi doloribus cumque amet. Iste perspiciatis consectetur quibusdam eligendi facilis dolorum, dicta enim.
+        Exercitationem assumenda doloremque velit totam aut officia nisi facilis perspiciatis, culpa nesciunt, cum sapiente quidem odio temporibus ea. Tempore voluptate recusandae deserunt facere debitis rem minus aliquam accusamus necessitatibus numquam?
+        Natus alias nemo delectus dignissimos, eos eligendi incidunt dolorem iusto debitis tenetur ipsum distinctio, sint laboriosam animi blanditiis veritatis perspiciatis. Nobis magnam eos facilis, vel perferendis quod reprehenderit ab neque.
+        Quos vero illum aperiam modi totam corrupti nesciunt nemo! Qui amet illum, dolorum itaque nulla doloribus accusamus sed, sequi dignissimos sunt aliquam autem placeat tenetur cumque fugiat tempore officiis quo!</p>
+    </div>
+
+    <script>
+        function handler(event) {
+            event.preventDefault(); // to avoid page refresh
+            alert("Right click is disabled")
+        }
+    </script>
+</body>
+</html>
