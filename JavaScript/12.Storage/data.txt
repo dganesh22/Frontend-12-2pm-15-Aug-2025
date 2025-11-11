@@ -1,0 +1,13 @@
+localStorage
+
+    localStorage.setItem(val,value) - store the data
+    localStorage.getItem(var) - read the data
+    localStorage.removeItem(var) - delete the data
+    localStorage.clear() - delete all
+
+same methods for sessionStorage
+
+    sessionStorage.setItem(val,value) - store the data
+    sessionStorage.getItem(var) - read the data
+    sessionStorage.removeItem(var) - delete the data
+    sessionStorage.clear() - delete all

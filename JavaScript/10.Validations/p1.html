@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+            <div class="title">
+                <h1>Validate Name</h1>
+            </div>
+
+            <div class="card">
+                <form autocomplete="off" method="post">
+                    <div class="form-item">
+                        <label for="name">Your Name</label>
+                        <input type="text" name="name" id="name" class="form-control" onkeyup="validateName()" required>
+                        <span id="nameErr"></span>
+                    </div>
+                    <div class="form-item">
+                        <button type="submit" class="btn success">Submit</button>
+                    </div>
+                </form>
+            </div>
+    </div>
+
+    <script>
+        let nameEl = document.getElementById("name")
+        let nameErr = document.getElementById("nameErr")
+
+        function validateName() {
+            let name = nameEl.value;
+            let regex = /^[a-zA-Z ]{3,16}$/;
+            if(!name) {
+                nameErr.innerText = "name is required";
+                nameErr.style.color = "red";
+            } else if(!regex.test(name)) {
+                nameErr.innerText = "invalid name";
+                nameErr.style.color = "orange";
+            } else if(regex.test(name)) {
+                nameErr.innerText = "valid name";
+                nameErr.style.color = "green";
+            }
+        }
+    </script>
+</body>
+</html>

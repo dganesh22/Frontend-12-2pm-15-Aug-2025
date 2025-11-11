@@ -1,0 +1,13 @@
+// methods inside parameterised constructor
+
+function Sum(a,b) {
+    this.x = a;
+    this.y = b;
+    this.calc = function() {
+        return this.x + this.y
+    }
+}
+
+let p = new Sum(10,20)
+
+document.writeln(`<h1> sum = ${p.calc()} </h1>`)

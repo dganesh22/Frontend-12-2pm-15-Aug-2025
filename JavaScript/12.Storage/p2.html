@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #output {
+            padding: 10px;
+            width: 500px;
+            background-color: slateblue;
+            color:#fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>sessionStorage</h1>
+    <form method="post" onsubmit="submitHandler(event)">
+        <div>
+            <label for="user">Enter username</label>
+            <input type="text" name="user" id="user" required>
+        </div>
+
+        <div>
+            <button>Submit</button>
+        </div>
+    </form>
+
+    <hr>
+
+    <div id="output"></div>
+
+    <script>
+        let userEl = document.getElementById("user")
+        let outEl = document.getElementById("output")
+
+        function submitHandler(event) {
+            event.preventDefault();
+            try {
+                let user = userEl.value;
+                console.log(`username is ${user}`)
+                sessionStorage.setItem("username", user)
+                alert("username set successfully")
+                window.location.reload()
+            } catch (err) {
+                console.error(err?.message)
+            }
+        }
+
+        function printData() {
+            if(sessionStorage.getItem("username")) {
+                let username = sessionStorage.getItem("username")
+                 outEl.innerHTML = `<h2> Username is ${username} </h2>
+                 <button onclick="deleteUser()">Delete</button>`
+            } else {
+                outEl.innerHTML = `<h2> No username found </h2>`
+            }
+        }
+
+        printData()
+
+        function deleteUser() {
+            if(window.confirm(`Are you sure to delete username?`)) {
+                sessionStorage.removeItem("username")
+                alert("username deleted")
+                window.location.reload()
+            }
+        }
+    </script>
+</body>
+</html>

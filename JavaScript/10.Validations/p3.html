@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section class="container">
+        <div class="title">
+            <h1>Validate Mobile Number</h1>
+        </div>
+
+        <div class="card">
+            <form method="post" autocomplete="off">
+                <div class="form-item">
+                    <label for="mobile">Your Mobile</label>
+                    <input type="text" name="mobile" id="mobile" class="form-control" onkeyup="validateMobile()">
+                    <span id="mobileErr"></span>
+                </div>
+                <div class="form-item">
+                    <button class="btn success">Send</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script>
+         let mobileEl = document.getElementById("mobile")
+         let mobileErr = document.getElementById("mobileErr")
+
+         function validateMobile() {
+             let mobile = mobileEl.value;
+             /* 
+                10 digits
+                0/ +91
+                first number starts with 6 7 8 9
+             */
+             let regex = /^(0|\+91)?[6-9]\d{9}$/;
+
+             if(!mobile) {
+                mobileErr.innerText = "Mobile number required";
+                mobileErr.style.color = "red";
+             } else if (!regex.test(mobile)) {
+                 mobileErr.innerText = "Invalid mobile number";
+                mobileErr.style.color = "orange";
+             } else if (regex.test(mobile)) {
+                 mobileErr.innerText = "Valid Indian Mobile number";
+                mobileErr.style.color = "green";
+             }
+         }
+    </script>
+</body>
+</html>

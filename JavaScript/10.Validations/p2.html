@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+            <div class="title">
+                <h1>Validate Email</h1>
+            </div>
+
+            <div class="card">
+                <form autocomplete="off" method="post">
+                    <div class="form-item">
+                        <label for="email">Your Email</label>
+                        <input type="text" name="email" id="email" class="form-control" onkeyup="validateEmail()" required>
+                        <span id="emailErr"></span>
+                    </div>
+                    <div class="form-item">
+                        <button type="submit" class="btn success">Submit</button>
+                    </div>
+                </form>
+            </div>
+    </div>
+
+    <script>
+        let emailEl = document.getElementById("email")
+        let emailErr = document.getElementById("emailErr")
+
+        function validateEmail() {
+            let email = emailEl.value;
+            // string@string.string
+            let regex = /^[a-z0-9_-]+@[a-z0-9-]+?\.[a-z]{2,10}$/;
+            if(!email) {
+                emailErr.innerText = "email is required";
+                emailErr.style.color = "red";
+            } else if(!regex.test(email)) {
+                emailErr.innerText = "invalid email id";
+                emailErr.style.color = "orange";
+            } else if(regex.test(email)) {
+                emailErr.innerText = "valid email id";
+                emailErr.style.color = "green";
+            }
+        }
+    </script>
+</body>
+</html>
