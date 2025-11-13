@@ -6,3 +6,4 @@ function product(a,b=3) {
 }
 
 product(10)
+product(10,4)
